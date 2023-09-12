@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Lab1/1.0.0": {
+        "dependencies": {
+          "CustomLinkedList": "1.0.0"
+        },
+        "runtime": {
+          "Lab1.dll": {}
+        }
+      },
+      "CustomLinkedList/1.0.0": {
+        "runtime": {
+          "CustomLinkedList.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Lab1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CustomLinkedList/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

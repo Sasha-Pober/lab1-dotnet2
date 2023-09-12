@@ -1,0 +1,12 @@
+C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\CustomLinkedList\bin\Debug\net7.0\CustomLinkedList.deps.json
+C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\CustomLinkedList\bin\Debug\net7.0\CustomLinkedList.dll
+C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\CustomLinkedList\bin\Debug\net7.0\CustomLinkedList.pdb
+C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\CustomLinkedList\obj\Debug\net7.0\CustomLinkedList.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\CustomLinkedList\obj\Debug\net7.0\CustomLinkedList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\CustomLinkedList\obj\Debug\net7.0\CustomLinkedList.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\CustomLinkedList\obj\Debug\net7.0\CustomLinkedList.AssemblyInfo.cs
+C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\CustomLinkedList\obj\Debug\net7.0\CustomLinkedList.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\CustomLinkedList\obj\Debug\net7.0\CustomLinkedList.dll
+C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\CustomLinkedList\obj\Debug\net7.0\refint\CustomLinkedList.dll
+C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\CustomLinkedList\obj\Debug\net7.0\CustomLinkedList.pdb
+C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\CustomLinkedList\obj\Debug\net7.0\ref\CustomLinkedList.dll
