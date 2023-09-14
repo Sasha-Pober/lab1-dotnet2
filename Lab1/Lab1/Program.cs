@@ -5,14 +5,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        CustomLinkedList.LinkedList<string>  list = new CustomLinkedList.LinkedList<string>();
+        CustomLinkedList.CustomLinkedList<string>  list = new CustomLinkedList.CustomLinkedList<string>();
 
         for (int i = 0; i < 4; i++)
         {
             list.AddLast(new Node<string>($"aboba{i}"));
         }
 
-        list.Show();
+        /*list.Show();
         Console.WriteLine();
 
         list.RemoveFirst();
@@ -20,10 +20,22 @@ class Program
         list.Show();
         Console.WriteLine();
 
-        list.Remove("aboba3");
+        list.Remove("aboba3");*/
 
-        list.Show();
+        foreach(var node in list)
+        {
+            Console.WriteLine(node.ToString());
+        }
         Console.WriteLine();
+
+        string[] arr = new string[list.Count];
+
+        list.CopyTo(arr, 3);
+
+        foreach(var node in arr)
+        {
+            Console.WriteLine(node.ToString());
+        }
 
     }
 }

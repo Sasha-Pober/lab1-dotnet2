@@ -1,15 +1,17 @@
-﻿using System.Net;
+﻿using System.Collections;
 
 namespace CustomLinkedList
 {
-    public class LinkedList<T>
+    public class CustomLinkedList<T> : ICollection<T>
     {
         public Node<T>? First { get; private set;}
         public Node<T>? Last { get; private set;}
 
         public int Count { get; private set;}
 
-        public LinkedList()
+        public bool IsReadOnly => false;
+
+        public CustomLinkedList()
         {
             this.First = null;
             this.Last = null;
@@ -120,15 +122,17 @@ namespace CustomLinkedList
             Count--;
         }
 
-        public void Remove(T node)
+        public bool Remove(T node)
         {
             if(this.First == null && this.Count == 0)
             {
                 Console.WriteLine($"Nothing to remove");
+                return false;
             }
             else if(this.First.Data.Equals(node))
             {
                 RemoveFirst();
+                return true;
             }
             else
             {
@@ -146,8 +150,57 @@ namespace CustomLinkedList
                     prevNode.Next = currNode.Next;
                     currNode.Next = currNode.Previous;
                 }
+                Count--;
+                return true;
             }
-            Count--;
+        }
+
+        public void Add(T item)
+        {
+            AddLast(new Node<T>(item));
+        }
+
+        public bool Contains(T item)
+        {
+            Node<T> node = First;
+            while(!node.Data.Equals(item) && node.Next != null)
+            {
+                node = node.Next;
+            }
+            if (node.Data.Equals(item)) return true;
+            else return false;
+            
+        }
+
+        public void CopyTo(T[] array, int arrayIndex)
+        {
+            if (arrayIndex < 0 || arrayIndex > array.Length) throw new ArgumentOutOfRangeException(nameof(arrayIndex));
+
+            if (array.Length - arrayIndex < Count) throw new Exception("Not enough space in array");
+
+            Node<T> node = First;
+
+            while(node != null)
+            {
+                array[arrayIndex++] = node.Data;
+                node = node.Next;
+            }
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            Node<T> node = First;
+
+            while(node != null)
+            {
+                yield return node.Data;
+                node = node.Next;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
 }

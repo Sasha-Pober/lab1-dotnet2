@@ -17,5 +17,7 @@ namespace CustomLinkedList
             Data = data;
         }
 
+        
+
     }
 }
