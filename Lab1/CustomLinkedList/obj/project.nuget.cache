@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3QgjYiWtU6DfmeuMKUUP36j9F7TuJyITNd3hauCiPm28klMcq34H9Qkhx7EBdtTTS0lTX2ZWGeZpjadAxVah8A==",
+  "dgSpecHash": "2rzoMxLPdQqeKT0cKBc1B+2jRM4+vkG8MU0PuUp3e9TQTlpgylhsH2ReAn+lAI04wrV15eWVC6u3J95vXQBHRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Documents\\kpi\\.NET\\Part 2\\lab1-dotnet2\\Lab1\\CustomLinkedList\\CustomLinkedList.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Documents\\kpi\\.NET\\Part 2\\lab1-dotnet2\\Lab1\\CustomLinkedList\\DataLayer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

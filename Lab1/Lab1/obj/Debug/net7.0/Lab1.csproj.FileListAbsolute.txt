@@ -8,11 +8,11 @@ C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\Lab1\bin\Debug\net7.0\La
 C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\Lab1\bin\Debug\net7.0\Lab1.runtimeconfig.json
 C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\Lab1\bin\Debug\net7.0\Lab1.dll
 C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\Lab1\bin\Debug\net7.0\Lab1.pdb
-C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\Lab1\bin\Debug\net7.0\CustomLinkedList.dll
-C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\Lab1\bin\Debug\net7.0\CustomLinkedList.pdb
 C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\Lab1\obj\Debug\net7.0\Lab1.csproj.CopyComplete
 C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\Lab1\obj\Debug\net7.0\Lab1.dll
 C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\Lab1\obj\Debug\net7.0\refint\Lab1.dll
 C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\Lab1\obj\Debug\net7.0\Lab1.pdb
 C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\Lab1\obj\Debug\net7.0\Lab1.genruntimeconfig.cache
 C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\Lab1\obj\Debug\net7.0\ref\Lab1.dll
+C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\Lab1\bin\Debug\net7.0\DataLayer.dll
+C:\Users\HP\Documents\kpi\.NET\Part 2\lab1-dotnet2\Lab1\Lab1\bin\Debug\net7.0\DataLayer.pdb

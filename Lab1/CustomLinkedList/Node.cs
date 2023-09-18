@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustomLinkedList
+namespace DataLayer
 {
     public class Node<T>
     {
@@ -16,8 +16,6 @@ namespace CustomLinkedList
         {
             Data = data;
         }
-
-        
 
     }
 }

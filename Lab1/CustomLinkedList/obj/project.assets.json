@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Documents\\kpi\\.NET\\Part 2\\lab1-dotnet2\\Lab1\\CustomLinkedList\\CustomLinkedList.csproj",
-      "projectName": "CustomLinkedList",
-      "projectPath": "C:\\Users\\HP\\Documents\\kpi\\.NET\\Part 2\\lab1-dotnet2\\Lab1\\CustomLinkedList\\CustomLinkedList.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Documents\\kpi\\.NET\\Part 2\\lab1-dotnet2\\Lab1\\CustomLinkedList\\DataLayer.csproj",
+      "projectName": "DataLayer",
+      "projectPath": "C:\\Users\\HP\\Documents\\kpi\\.NET\\Part 2\\lab1-dotnet2\\Lab1\\CustomLinkedList\\DataLayer.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\HP\\Documents\\kpi\\.NET\\Part 2\\lab1-dotnet2\\Lab1\\CustomLinkedList\\obj\\",
       "projectStyle": "PackageReference",
