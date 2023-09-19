@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2rzoMxLPdQqeKT0cKBc1B+2jRM4+vkG8MU0PuUp3e9TQTlpgylhsH2ReAn+lAI04wrV15eWVC6u3J95vXQBHRQ==",
+  "dgSpecHash": "bZFDEQXhsTrf6s2k0AqyRMvCDFVTgPPYq+9R4c1u8Z0EXPZXpkCH4b00OwV8hiZbN8SgkYeOxW23b7PsRTlvYg==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\Documents\\kpi\\.NET\\Part 2\\lab1-dotnet2\\Lab1\\CustomLinkedList\\DataLayer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\scitech.memprofilerapi\\5.7.2\\scitech.memprofilerapi.5.7.2.nupkg.sha512"
+  ],
   "logs": []
 }

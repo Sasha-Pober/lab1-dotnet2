@@ -3,16 +3,7 @@ using System.Collections;
 using DataLayer;
 class Program
 {
-    static void InitHandlers<T>(CustomLinkedList<T> list, MessageManager mgr)
-    {
-        list.OnAdding += mgr.OnAdded;
-        list.OnRemoving += mgr.OnRemoved;
-        list.OnCleared += mgr.OnCleared;
-        list.OnCopied += mgr.OnCopied;
-        list.OnEndPlaced += mgr.OnEndPlaced;
-        list.OnBeginPlaced += mgr.OnBeginPlaced;
-    }
-
+    
     static void ShowList<T>(ICollection<T> list)
     {
         foreach (T item in list)
@@ -24,9 +15,8 @@ class Program
     {
         CustomLinkedList<string>  list = new CustomLinkedList<string>();
         MessageManager mgr = new MessageManager();
-        LinkedList<string> lst = new LinkedList<string>();
 
-        InitHandlers(list, mgr);
+        mgr.InitHandlers(list);
 
         Console.WriteLine("Adding elements to the end:");
 
@@ -37,8 +27,6 @@ class Program
         ShowList(list);
 
         Console.WriteLine();
-
-
 
         Console.WriteLine("Adding items to the begin:");
 
@@ -121,6 +109,7 @@ class Program
 
         Console.WriteLine();
 
+       
 
     }
 }

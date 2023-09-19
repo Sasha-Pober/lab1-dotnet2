@@ -2,9 +2,25 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "SciTech.MemProfilerApi/5.7.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/SciTech.MemProfilerApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/SciTech.MemProfilerApi.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "DataLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "SciTech.MemProfilerApi": "5.7.2"
+        },
         "compile": {
           "bin/placeholder/DataLayer.dll": {}
         },
@@ -15,6 +31,25 @@
     }
   },
   "libraries": {
+    "SciTech.MemProfilerApi/5.7.2": {
+      "sha512": "zJDrwfDozLB4IVWymHiQAuszWszcLd9xD5Mb8k7IhitfG7j3WHkz5qPUusjRMMIbw5ZPLO5Qujte/8uq+PrGTg==",
+      "type": "package",
+      "path": "scitech.memprofilerapi/5.7.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "NmpIcon64.png",
+        "lib/net20/SciTech.MemProfilerApi.dll",
+        "lib/net20/SciTech.MemProfilerApi.xml",
+        "lib/netstandard1.1/SciTech.MemProfilerApi.dll",
+        "lib/netstandard1.1/SciTech.MemProfilerApi.xml",
+        "lib/netstandard2.0/SciTech.MemProfilerApi.dll",
+        "lib/netstandard2.0/SciTech.MemProfilerApi.xml",
+        "scitech.memprofilerapi.5.7.2.nupkg.sha512",
+        "scitech.memprofilerapi.nuspec"
+      ]
+    },
     "DataLayer/1.0.0": {
       "type": "project",
       "path": "../CustomLinkedList/DataLayer.csproj",

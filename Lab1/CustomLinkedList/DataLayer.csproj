@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="SciTech.MemProfilerApi" Version="5.7.2" />
+  </ItemGroup>
+
 </Project>
