@@ -28,7 +28,7 @@ class Program
 
         Console.WriteLine();
 
-        Console.WriteLine("Adding items to the begin:");
+        Console.WriteLine("Adding items to the begin: element10");
 
         list.AddFirst(new Node<string>("element10"));
         ShowList(list);
@@ -37,7 +37,7 @@ class Program
 
 
 
-        Console.WriteLine("Adding before specified item:");
+        Console.WriteLine("Adding before specified item: element5 before elementX(added to the end)");
 
         Node<string> elemX = new Node<string>("elementX");
         Node<string> elem5 = new Node<string>("element5");
@@ -49,7 +49,7 @@ class Program
 
 
 
-        Console.WriteLine("Adding after specified item:");
+        Console.WriteLine("Adding after specified item: element6 after element5");
 
         Node<string> elem6 = new Node<string>("element6");
         list.AddAfter(elem6, elem5);
@@ -58,14 +58,14 @@ class Program
         Console.WriteLine();
 
 
-        Console.WriteLine("Finding items:");
+        Console.WriteLine("Finding items: element2");
 
         Console.WriteLine($"Found item - {list.Find("element2").Data}");
 
         Console.WriteLine();
 
 
-        Console.WriteLine("Removing items:");
+        Console.WriteLine("Removing items: element3");
 
         list.Remove("element3");
         ShowList(list);
