@@ -25,7 +25,7 @@ namespace DataLayer
 
         public void AddFirst(Node<T> node)
         {
-            if(this.First == null && this.Count == 0)
+            if(IsEmpty())
             {
                 this.First = node;
                 this.Last = node;
@@ -43,11 +43,10 @@ namespace DataLayer
 
         public void AddLast(Node<T> node)
         {
-            if (this.First == null && this.Count == 0)
+            if (IsEmpty())
             {
                 this.First = node;
                 this.Last = node;
-
             }
             else
             {
@@ -55,6 +54,8 @@ namespace DataLayer
                 node.Previous = this.Last;
                 this.Last = node;
             }
+        
+
             Count++;
             OnEndPlaced?.Invoke(this);
         }
@@ -70,13 +71,13 @@ namespace DataLayer
 
         public void AddBefore(Node<T> newNode, Node<T> oldNode)
         {
-            if ((this.First == null && this.Count == 0) || this.First == oldNode)
+            if (IsEmpty() || this.First == oldNode)
             {
                 this.AddFirst(newNode);
                 return;
             }
 
-            if (this.Contains(oldNode) == false)
+            if (!this.Contains(oldNode))
             {
                 throw new NullReferenceException("Such node does not exist");
             }
@@ -95,13 +96,7 @@ namespace DataLayer
 
         public void AddAfter(Node<T> newNode, Node<T> oldNode)
         {
-            if((this.First == null && this.Count == 0) || this.First == oldNode)
-            {
-                AddFirst(newNode);
-                return;
-            }
-
-            if(this.Last == oldNode)
+            if(IsEmpty() || (this.First == oldNode && this.Last == oldNode))
             {
                 AddLast(newNode);
                 return;
@@ -126,7 +121,7 @@ namespace DataLayer
 
         public void RemoveFirst()
         {
-            if(this.Count == 0)
+            if(IsEmpty())
             {
                 Console.WriteLine("There is no item to remove");
                 return;
@@ -156,7 +151,7 @@ namespace DataLayer
 
         public bool Remove(T node)
         {
-            if(this.First == null && this.Count == 0)
+            if(IsEmpty())
             {
                 Console.WriteLine($"Nothing to remove");
                 return false;
@@ -289,6 +284,11 @@ namespace DataLayer
         IEnumerator IEnumerable.GetEnumerator()
         {
             throw new NotImplementedException();
+        }
+
+        private bool IsEmpty()
+        {
+            return this.First == null && this.Last == null && this.Count.Equals(0);
         }
     }
 }
