@@ -4,7 +4,7 @@ namespace DataLayer
 {
     public class CustomLinkedList<T> : ICollection<T>
     {
-        public delegate void OnActionEventHandler(object sender, EventArgs e);
+        public delegate void OnActionEventHandler(object sender);
         public event OnActionEventHandler? OnAdding;
         public event OnActionEventHandler? OnRemoving;
         public event OnActionEventHandler? OnCleared;
@@ -38,7 +38,7 @@ namespace DataLayer
             }
             Count++;
 
-            OnBeginPlaced(this, EventArgs.Empty);
+            OnBeginPlaced?.Invoke(this);
         }
 
         public void AddLast(Node<T> node)
@@ -56,8 +56,7 @@ namespace DataLayer
                 this.Last = node;
             }
             Count++;
-
-            OnEndPlaced(this, EventArgs.Empty);
+            OnEndPlaced?.Invoke(this);
         }
 
         public void Clear()
@@ -66,7 +65,7 @@ namespace DataLayer
             Last = null;
             Count = 0;
 
-            OnCleared(this, EventArgs.Empty);
+            OnCleared?.Invoke(this);   
         }
 
         public void AddBefore(Node<T> newNode, Node<T> oldNode)
@@ -79,8 +78,7 @@ namespace DataLayer
 
             if (this.Contains(oldNode) == false)
             {
-                Console.WriteLine("Such node does not exist");
-                return;
+                throw new NullReferenceException("Such node does not exist");
             }
             
             Node<T>? prevNode = oldNode.Previous;
@@ -92,7 +90,7 @@ namespace DataLayer
                
             Count++;
 
-            OnAdding(this, EventArgs.Empty);
+            OnAdding?.Invoke(this);
         }
 
         public void AddAfter(Node<T> newNode, Node<T> oldNode)
@@ -111,8 +109,7 @@ namespace DataLayer
 
             if(this.Contains(oldNode) == false)
             {
-                Console.WriteLine("Such node does not exist");
-                return;
+                throw new NullReferenceException("Such a node does not exists");
             }
             
             Node<T>? nextNode = oldNode.Next;
@@ -124,7 +121,7 @@ namespace DataLayer
             
             Count++;
 
-            OnAdding(this, EventArgs.Empty);
+            OnAdding?.Invoke(this);
         }
 
         public void RemoveFirst()
@@ -139,7 +136,7 @@ namespace DataLayer
             this.First!.Previous = null;
             Count--;
 
-            OnRemoving(this, EventArgs.Empty);
+            OnRemoving?.Invoke(this);
         }
 
         public void RemoveLast()
@@ -150,11 +147,11 @@ namespace DataLayer
                 return;
             }
 
-            this.Last = this.Last.Previous;
+            this.Last = this.Last!.Previous;
             this.Last!.Next = null;
             Count--;
 
-            OnRemoving(this, EventArgs.Empty);
+            OnRemoving?.Invoke(this);
         }
 
         public bool Remove(T node)
@@ -186,7 +183,7 @@ namespace DataLayer
                     currNode.Next = currNode.Previous;
                 }
                 Count--;
-                OnRemoving(this, EventArgs.Empty);
+                OnRemoving?.Invoke(this);
                 return true;
 
             }
@@ -196,12 +193,12 @@ namespace DataLayer
         {
             AddLast(new Node<T>(item));
 
-            OnAdding(this, EventArgs.Empty);
+            OnAdding?.Invoke(this);
         }
 
         public bool Contains(T item)
         {
-            Node<T> node = First;
+            Node<T> node = First!;
             while(!node!.Data!.Equals(item) && node.Next != null)
             {
                 node = node.Next;
@@ -213,7 +210,7 @@ namespace DataLayer
 
         private bool Contains(Node<T> item)
         {
-            Node<T> node = First;
+            Node<T> node = First!;
             while (!node.Equals(item) && node.Next != null)
             {
                 node = node.Next;
@@ -226,14 +223,12 @@ namespace DataLayer
         {
             if (arrayIndex < 0 || arrayIndex > array.Length)
             {
-                Console.WriteLine("Index is out of range");
-                return;
+                throw new ArgumentOutOfRangeException("Index was out of range");
             }
 
             if (array.Length - arrayIndex < Count)
             {
-                Console.WriteLine("Cannot copy to array: not enough space");
-                return;
+                throw new InvalidOperationException("Cannot copy to array: not enough space");
             }
 
             Node<T>? node = First;
@@ -244,7 +239,7 @@ namespace DataLayer
                 node = node.Next;
             }
 
-            OnCopied(this, EventArgs.Empty);
+            OnCopied?.Invoke(this);
         }
 
         public Node<T> Find(T item)
@@ -282,7 +277,7 @@ namespace DataLayer
 
         public IEnumerator<T> GetEnumerator()
         {
-            Node<T> node = First;
+            Node<T> node = First!;
 
             while(node != null)
             {

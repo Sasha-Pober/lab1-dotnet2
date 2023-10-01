@@ -9,12 +9,12 @@ namespace DataLayer
 {
     public class MessageManager
     {
-        public void OnAdding(object sender, EventArgs e) => Console.WriteLine("Successfully added item");
-        public void OnRemoving(object sender, EventArgs e) => Console.WriteLine("Successfully removed item");
-        public void OnCleared(object sender, EventArgs e) => Console.WriteLine("Successfully cleared te list");
-        public void OnCopied(object sender, EventArgs e) => Console.WriteLine("Successfully copied the list into array");
-        public void OnEndPlaced(object sender, EventArgs e) => Console.WriteLine("Successfully added to the end");
-        public void OnBeginPlaced(object sender, EventArgs e) => Console.WriteLine("Successfully added to the begin");
+        public void OnAdding(object sender) => Console.WriteLine("Successfully added item");
+        public void OnRemoving(object sender) => Console.WriteLine("Successfully removed item");
+        public void OnCleared(object sender) => Console.WriteLine("Successfully cleared te list");
+        public void OnCopied(object sender) => Console.WriteLine("Successfully copied the list into array");
+        public void OnEndPlaced(object sender) => Console.WriteLine("Successfully added to the end");
+        public void OnBeginPlaced(object sender) => Console.WriteLine("Successfully added to the begin");
 
         public void InitHandlers<T>(CustomLinkedList<T> list)
         {

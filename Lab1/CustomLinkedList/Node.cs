@@ -17,5 +17,9 @@ namespace DataLayer
             Data = data;
         }
 
+        public bool Equals(Node<T> node)
+        {
+            return this == node && EqualityComparer<T>.Default.Equals(this.Data, node.Data);
+        }
     }
 }

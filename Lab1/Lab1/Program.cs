@@ -3,7 +3,6 @@ using System.Collections;
 using DataLayer;
 class Program
 {
-    
     static void ShowList<T>(ICollection<T> list)
     {
         foreach (T item in list)
@@ -11,6 +10,8 @@ class Program
             Console.WriteLine(item);
         }
     }
+
+    
     static void Main(string[] args)
     {
         CustomLinkedList<string>  list = new CustomLinkedList<string>();
