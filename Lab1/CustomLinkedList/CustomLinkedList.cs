@@ -123,7 +123,12 @@ namespace DataLayer
         {
             if(IsEmpty())
             {
-                Console.WriteLine("There is no item to remove");
+                throw new Exception("There is no item to remove");
+            }
+
+            if(Count == 1)
+            {
+                Clear();
                 return;
             }
 
@@ -138,8 +143,7 @@ namespace DataLayer
         {
             if (this.Count == 0)
             {
-                Console.WriteLine("There is no item to remove");
-                return;
+                throw new Exception("There is nothing to remove");
             }
 
             this.Last = this.Last!.Previous;
@@ -153,10 +157,9 @@ namespace DataLayer
         {
             if(IsEmpty())
             {
-                Console.WriteLine($"Nothing to remove");
-                return false;
+                throw new Exception("There is nothing to remove");
             }
-            else if(First!.Data!.Equals(node))
+            else if(First!.Equals(node))
             {
                 RemoveFirst();
                 return true;
@@ -166,7 +169,7 @@ namespace DataLayer
                 Node<T>? prevNode = First;
                 Node<T>? currNode = prevNode.Next;
 
-                while(currNode != null && !currNode.Data!.Equals(node))
+                while(currNode != null && !currNode.Equals(node))
                 {
                     prevNode = currNode;
                     currNode = prevNode.Next;
@@ -194,11 +197,11 @@ namespace DataLayer
         public bool Contains(T item)
         {
             Node<T> node = First!;
-            while(!node!.Data!.Equals(item) && node.Next != null)
+            while(!node.Equals(item) && node.Next != null)
             {
                 node = node.Next;
             }
-            if (node.Data.Equals(item)) return true;
+            if (node.Equals(item)) return true;
             else return false;
             
         }
@@ -256,14 +259,7 @@ namespace DataLayer
                 }
                 else
                 {
-                    while(node != null)
-                    {
-                        if(node!.Data == null)
-                        {
-                            return node;
-                        }
-                        node = node.Next!;
-                    }
+                    throw new InvalidOperationException("Item is not specified");
                 }    
             }
             return null;
@@ -283,7 +279,13 @@ namespace DataLayer
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            Node<T> node = First!;
+
+            while (node != null)
+            {
+                yield return node.Data;
+                node = node.Next;
+            }
         }
 
         private bool IsEmpty()

@@ -21,5 +21,10 @@ namespace DataLayer
         {
             return this == node && EqualityComparer<T>.Default.Equals(this.Data, node.Data);
         }
+
+        public bool Equals(T data)
+        {
+            return this.Data.Equals(data);
+        }
     }
 }
