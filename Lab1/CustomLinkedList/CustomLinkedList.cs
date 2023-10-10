@@ -190,8 +190,6 @@ namespace DataLayer
         public void Add(T item)
         {
             AddLast(new Node<T>(item));
-
-            OnAdding?.Invoke(this);
         }
 
         public bool Contains(T item)

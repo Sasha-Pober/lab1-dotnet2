@@ -16,7 +16,7 @@ namespace DataLayer
         public void OnEndPlaced(object sender) => Console.WriteLine("Successfully added to the end");
         public void OnBeginPlaced(object sender) => Console.WriteLine("Successfully added to the begin");
 
-        public void InitHandlers<T>(CustomLinkedList<T> list)
+        public bool InitHandlers<T>(CustomLinkedList<T> list)
         {
             list.OnAdding += this.OnAdding;
             list.OnRemoving += this.OnRemoving;
@@ -24,6 +24,7 @@ namespace DataLayer
             list.OnCopied += this.OnCopied;
             list.OnEndPlaced += this.OnEndPlaced;
             list.OnBeginPlaced += this.OnBeginPlaced;
+            return true;
         }
 
         public void RemoveAddingHandler<T>(CustomLinkedList<T> list) => list.OnAdding -= this.OnAdding;
